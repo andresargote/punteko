@@ -1,0 +1,34 @@
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.main {
+    padding: var(--space-6);
+}
+
+.walletTitle {
+    font-size: var(--font-size-3xl);
+    color: var(--brand-color);
+    margin-bottom: var(--space-6);
+    line-height: 125%;
+    text-wrap: balance;
+}
+
+.walletCopy {
+    color: var(--brand-color);
+    text-wrap: pretty;
+    margin-bottom: var(--space-6);
+}
+
+.walletButton {
+    display: inline-block;
+    padding: var(--space-3) var(--space-4);
+    background-color: var(--google-wallet-bg);
+    color: var(--google-wallet-color);
+    border-radius: 9999px;
+    width: fit-content;
+
+    display: flex;
+    gap: var(--space-3);
+}

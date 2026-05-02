@@ -1,0 +1,37 @@
+.button {
+    border: none;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: var(--font-size-base);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.cta {
+    background-color: var(--brand-cta);
+    color: var(--brand-cta-color);
+}
+
+.small {
+    min-height: var(--size-sm);
+}
+
+.medium {
+    min-height: var(--size-md);
+    padding: var(--space-4) var(--space-6);
+}
+
+.large {
+    min-height: var(--size-lg);
+}
+
+.full {
+    width: 100%;
+}
+
+.fit {
+    width: fit-content;
+}

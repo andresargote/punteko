@@ -67,7 +67,7 @@
   width: 100%;
   max-width: 440px;
   gap: 16px;
-  font-size: 14px;
+  font-size: var(--font-size-md);
 }
 
 .ctas a {
@@ -117,7 +117,7 @@ a.secondary {
   }
 
   .intro h1 {
-    font-size: 32px;
+    font-size: var(--font-size-3xl);
     line-height: 40px;
     letter-spacing: -1.92px;
   }

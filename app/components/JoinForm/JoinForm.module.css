@@ -1,0 +1,55 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form .formFields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.form .consentText {
+    font-size: var(--font-size-md);
+    color: var(--color-text-secondary);
+    text-wrap: pretty;
+    line-height: 150%;
+    color: var(--color-consent-text);
+}
+
+.form .phoneFieldAndConsent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-10);
+}
+
+.form .phoneFieldAndConsent .consent {
+    display: flex;
+    gap: var(--space-4);
+    cursor: pointer;
+}
+
+.form .otpMessage {
+    font-size: var(--font-size-md);
+    color: var(--brand-color);
+    text-wrap: pretty;
+    margin-bottom: var(--space-4);
+}
+
+
+.form .resendLink {
+    background: none;
+    border: none;
+    color: var(--color-input-label);
+    cursor: pointer;
+    font-size: var(--font-size-md);
+    padding: 0;
+    text-decoration: underline;
+    margin-top: var(--space-4);
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}

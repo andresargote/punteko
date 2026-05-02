@@ -1,0 +1,22 @@
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.main {
+    padding: var(--space-6);
+}
+
+.brandTitle {
+    font-size: var(--font-size-3xl);
+    color: var(--brand-color);
+    margin-bottom: var(--space-6);
+    line-height: 125%;
+    text-wrap: balance;
+}
+
+.brandOffer {
+    color: var(--brand-color);
+    text-wrap: pretty;
+    margin-bottom: var(--space-6);
+}

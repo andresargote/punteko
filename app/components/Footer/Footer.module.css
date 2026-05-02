@@ -1,0 +1,14 @@
+.footer {
+    padding: var(--space-6);
+    text-align: center;
+}
+
+.footer .link {
+    color: var(--color-footer-link);
+    font-size: var(--font-size-sm);
+}
+
+.footer .logo {
+    font-weight: 700;
+    letter-spacing: 0.04em; 
+}
