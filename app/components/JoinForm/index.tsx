@@ -87,6 +87,10 @@ export default function JoinForm() {
       <form
         aria-label="Verificación de código para completar el registro"
         className={styles.form}
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleVerifyOtp();
+        }}
       >
         <p className={styles.otpMessage}>
           Hemos enviado un código de verificación a <strong>{phone}</strong>
@@ -104,9 +108,9 @@ export default function JoinForm() {
           />
 
           <Button
+            type="submit"
             variant="cta"
             width="full"
-            onClick={handleVerifyOtp}
             isLoading={isPending}
             disabled={otp.length < 6 || isPending}
           >
