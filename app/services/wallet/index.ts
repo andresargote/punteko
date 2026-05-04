@@ -1,5 +1,8 @@
 import jwt from "jsonwebtoken";
-import serviceAccount from "@/service-account.json";
+
+const SERVICE_ACCOUNT = JSON.parse(
+  process.env.GOOGLE_SERVICE_ACCOUNT_JSON || "",
+);
 
 const ISSUER_ID = process.env.WALLET_ISSUER_ID!;
 const CLASS_SUFFIX = process.env.WALLET_CLASS_SUFFIX!;
@@ -37,7 +40,7 @@ export function generateWalletSaveUrl({
   };
 
   const claims = {
-    iss: serviceAccount.client_email,
+    iss: SERVICE_ACCOUNT.client_email,
     aud: "google",
     origins: [origin],
     typ: "savetowallet",
@@ -46,7 +49,7 @@ export function generateWalletSaveUrl({
     },
   };
 
-  const token = jwt.sign(claims, serviceAccount.private_key, {
+  const token = jwt.sign(claims, SERVICE_ACCOUNT.private_key, {
     algorithm: "RS256",
   });
 

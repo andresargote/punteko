@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { GoogleAuth } from "google-auth-library";
-import serviceAccount from "@/service-account.json";
+
+const SERVICE_ACCOUNT = JSON.parse(
+  process.env.GOOGLE_SERVICE_ACCOUNT_JSON || "",
+);
 
 const ISSUER_ID = process.env.WALLET_ISSUER_ID!;
 
@@ -21,7 +24,7 @@ function getNextTier(points: number) {
 }
 
 const auth = new GoogleAuth({
-  credentials: serviceAccount,
+  credentials: SERVICE_ACCOUNT,
   scopes: ["https://www.googleapis.com/auth/wallet_object.issuer"],
 });
 
